@@ -72,7 +72,8 @@ module WOWCombatLog
       def source_name
         return @source.name
       end
-
+      
+      # returns name of @destination
       def destination_name
         return @destination.name
       end
