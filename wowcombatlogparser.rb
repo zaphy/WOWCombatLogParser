@@ -1,7 +1,7 @@
 require "lib/wowcombatlogparser"
 require "find"
 
-data_dir = File.join(File.dirname(__FILE__), "..", "data")
+data_dir = File.join(File.dirname(__FILE__), "data")
 
 #Find.find(data_dir) do |path|
 #  path = File.expand_path(path)
@@ -16,6 +16,7 @@ data_dir = File.join(File.dirname(__FILE__), "..", "data")
 lr = WOWCombatLog::Reader.new(File.read("#{data_dir}/WoWCombatLog_cata001.txt"))
   
 puts lr.to_yaml
+
 exit
 #pp lr.detect_multiple_runs[0..10].map {|x| [x[0] / 60, x[1]]}
 #exit
